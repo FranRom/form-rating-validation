@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title></title>
+
+      <link rel="stylesheet" href="css/font-awesome.min.css" />
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <!--Import style.css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!--Let browser knows website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script>
+            /* global $, checkFileUploaded*/
+            function checkValue(mySelectID, mySelect, iSelect){
+                var selectValue,
+                    mySelect,
+                    iSelect;
+                selectValue = document.getElementById(mySelectID).value;
+                    if(selectValue == 0) {
+                    $(mySelect).parent().css('color', '#f00');
+                    $(iSelect).css('color', '#f00');
+                } else {
+                    $(mySelect).parent().css('color', '#52D1D3');
+                    $(iSelect).css('color', '#52D1D3');
+                }
+            }
+
+            function checkFileUploaded (){
+               if($('input[type="file"]').val()) {
+                   $('.input-file i').css('color', '#52D1D3');
+                    $('.input-file label').css('color', '#52D1D3');
+                } else{
+                    $('.input-file i').css('color', '#f00');
+                    $('.input-file label').css('color', '#f00');
+                }
+            }
+        </script>
+	</head>
+	<body>
+
+        <div class="contact">
+            <div class="container">
+              <form class="col s12" id="reg-form">
+                <!-- start the heading -->
+
+                    <div class="head">
+                       <h2><span class="con">Con</span>táctenos</h2>
+                       <p>Te recomendamos que visites nuestro <a href="#">blog</a> y te unas a nuestro grupo de <a href="#">facebook</a> y <a href="#">twitter</a> .</p>
+                        <div class="ellen-campos">
+                            <p class="ellen" style="color: #aeaeae;">LLENE ESTE FORMULARIO</p>
+                            <p class="campos"><span class="dot">.</span>campos requeridos</p>
+                        </div>
+
+
+                    </div>
+
+                    <!-- start the personal-details -->
+                    <div class="personal-details">
+                        <div class="row">
+                            <div class="input-field col s12">
+                              <i class="material-icons prefix">email</i>
+                              <input id="icon_prefix" type="email" name="email" class="validate email" required="" aria-required="true">
+                              <label for="icon_prefix">Email</label>
+                            </div>
+
+                            <!-- Alert section -->
+                            <div class="alert-error alert-error-email">
+                               Por favor ingresa un email valido
+                            </div>
+
+                            <div class="input-field col s12">
+                              <i class="material-icons prefix">person</i>
+                              <input  id="icon_telephone" type="text" name="Nombre" class="validate number" required="required" aria-required="true">
+                              <label for="icon_telephone">Nombre</label>
+                            </div>
+
+                            <!-- Alert section -->
+                            <div class="alert-error alert-error-number">
+                                Por favor ingresa un nombre valido
+                            </div>
+
+                            <div class="input-field col s12">
+                              <i class="material-icons prefix">short_text</i>
+                              <input  id="icon_telephone" type="text" name="text" class="validate text" required="required" aria-required="true">
+                              <label for="icon_telephone">Asunto</label>
+                            </div>
+
+                            <!-- Alert section -->
+                            <div class="alert-error alert-error-text">
+                               Por favor ingresa un asunto valido
+                            </div>
+
+                            <div class="input-field col s12">
+                              <i class="material-icons prefix">chat_bubble_outline</i>
+                              <textarea id="icon_prefix2" class="materialize-textarea description" name="Descripción" data-length="300" required="required" aria-required="true"></textarea>
+                              <label for="icon_prefix2">Descripción</label>
+                            </div>
+
+                            <!-- Alert section -->
+                            <div class="alert-error alert-error-description">
+                                Por favor ingresa una descripción valida
+                            </div>
+
+                      </div>
+                </div>
+                <!-- star rating -->
+          <div class="form-group stars">
+                          <div class="star">
+                              <h3><i class="fa fa-star" aria-hidden="true"></i> ¿Cómo fue tu experiencia? </h3>
+                            <fieldset class="rating">
+                                <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                                <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                                <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                                <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                                <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                                <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                                <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                                <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                            </fieldset>
+                          </div>
+                      </div>
+           <!-- start select boxes -->
+               <div class="list">
+                <div class="row">
+                 <div class="input-field col s12" onmousemove="checkValue('mySelect1', '#mySelect1', '.i-select1');">
+                     <i class="material-icons i-select1 prefix">assistant_photo</i>
+                     <select name="pais" id="mySelect1" required>
+                       <option value="0">El pais</option>
+                       <option value="1">Option 1</option>
+                       <option value="2">Option 2</option>
+                       <option value="3">Option 3</option>
+                     </select>
+                 </div>
+                 <div class="input-field i-select2 col s12" onmousemove="checkValue('mySelect2', '#mySelect2', '.i-select2');">
+                     <i class="material-icons i-select2 prefix">group</i>
+                     <select id="mySelect2">
+                       <option value="0">Departamento</option>
+                       <option value="1">Option 1</option>
+                       <option value="2">Option 2</option>
+                       <option value="3">Option 3</option>
+                     </select>
+                 </div>
+                 <div class="file-field input-field col s12" onmousemove="checkFileUploaded();">
+                   <div class="input-file">
+                     <i class="material-icons prefix">attach_file</i>
+                     <input type="file" multiple>
+                     <label class="agregue" for="icon_prefix"><span class="sfile">Agregue un archivo</span> o coloque archivos aquí</label>
+                   </div>
+                   <div class="file-path-wrapper">
+                     <input class="file-path validate" type="text">
+                   </div>
+                 </div>
+              </div>
+             </div>
+                  <button onclick="checkValue()" class="btn waves-effect waves-light" type="submit" name="action">Envía tu pregunta</button>
+           </form>
+                <!--end form -->
+          </div>
+        </div>
+        <script src="js/jquery-3.2.1.min.js"></script>
+       <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script src="js/main.js"></script>
+	</body>
+</html>
